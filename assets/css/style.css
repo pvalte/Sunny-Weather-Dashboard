@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: rgb(252, 239, 145); */
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+header h1 {
+    padding: 10px;
+    color: white;
+    text-align: center;
+    background: linear-gradient(.25turn, #2BD2FF, 10%, rgb(10, 10, 114));
+}
+
+#search-sidebar {
+
+};
+
+#search-form {
+
+}
+
+#saved-cities {
+    border-top: rgb(173, 173, 173) 2px solid;
+}
+
+.saved-city {
+    background-color: rgb(173, 173, 173);
+    margin: 7px 0;
+    padding: 5px;
+}
+
+.search-btn {
+    margin: 10px 0;
+    background: linear-gradient(.25turn, #2BD2FF, 10%, rgb(10, 10, 114));
+    background-size: 5000px 1px;
+    background-position: -100px 0px;
+    color: white;
+}
+
+#today {
+    border:rgb(10, 10, 114) solid 1px;
+    margin: 10px;
+
+}
+
+#multiday-forecast {
+    margin-top: 20px;
+}
+
+h3 {
+    margin:  10px;
+}
+
+#day-one,
+#day-two,
+#day-three,
+#day-four,
+#day-five {
+    background-color: rgb(10, 10, 114);
+    color: white;
+    
+}
