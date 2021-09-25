@@ -12,12 +12,12 @@
 
 <body>
     <header>
-        <h1>Weather Dashboard</h1>
+        <h1>Sunny Weather Dashboard</h1>
     </header>
 
     <main class="container-fluid">
         <div class="row">
-            <div class="col-md-2" id="search-sidebar">
+            <div class="col-md-3" id="search-sidebar">
                 <h2>Search for a City:</h2>
                 <form class="text-center" id="search-form">
                     <input name="city" id="city" type="text" autofocus="true" class="form-input col-12" />
@@ -27,11 +27,11 @@
                 </div>
             </div>
 
-            <div class="col-md-10">
+            <div class="col-md-9">
                 <div class="row justify-content-around" id="todays-forecast">
                     <div class="col-12" >
                         <div id="today" class="card-body">
-                            <h2 class="card-title"><span id="city-name"></span> <span id="todays-date"></span> <img src="" id="todays-icon"></img></h2>
+                            <h2 class="card-title"><span id="city-name"></span> <span id="todays-date"></span><img src="" id="todays-icon"></img></h2>
                             <p class="card-text" id="today-temp"></p>
                             <p class="card-text" id="today-wind"></p>
                             <p class="card-text" id="today-humidity"></p>
@@ -45,28 +45,53 @@
                         <h3>5-Day Forecast:</h3>
                     </div>
 
-                    <div id="day-one" class="card col-lg-2 col-md-12">
-                        <div class="card-body five-day">
+                    <div id="day-one" class="card col-lg-2 col-md-11 mt-2">
+                        <div class="five-day">
+                            <h4 class="date"></h4>
+                            <img class="icon"></img>
+                            <p class="temp"></p>
+                            <p class="wind"></p>
+                            <p class="humidity"></p>
                         </div>
                     </div>
 
-                    <div id="day-two" class="card col-lg-2 col-md-12">
-                        <div class="card-body five-day">
+                    <div id="day-two" class="card col-lg-2 col-md-11 mt-2">
+                        <div class="five-day">
+                            <h4 class="date"></h4>
+                            <img class="icon"></img>
+                            <p class="temp"></p>
+                            <p class="wind"></p>
+                            <p class="humidity"></p>
                         </div>
                     </div>
  
-                    <div id="day-three" class="card col-lg-2 col-md-12">
-                        <div class="card-body five-day">
+                    <div id="day-three" class="card col-lg-2 col-md-11 mt-2">
+                        <div class="five-day">
+                            <h4 class="date"></h4>
+                            <img class="icon"></img>
+                            <p class="temp"></p>
+                            <p class="wind"></p>
+                            <p class="humidity"></p>
                         </div>
                     </div>
 
-                    <div id="day-four" class="card col-lg-2 col-md-12">
-                        <div class="card-body five-day">
+                    <div id="day-four" class="card col-lg-2 col-md-11 mt-2">
+                        <div class="five-day">
+                            <h4 class="date"></h4>
+                            <img class="icon"></img>
+                            <p class="temp"></p>
+                            <p class="wind"></p>
+                            <p class="humidity"></p>
                         </div>
                     </div>
 
-                    <div id="day-five" class="card col-lg-2 col-md-12">
-                        <div class="card-body five-day">
+                    <div id="day-five" class="card col-lg-2 col-md-11 mt-2">
+                        <div class="five-day">
+                            <h4 class="date"></h4>
+                            <img class="icon"></img>
+                            <p class="temp"></p>
+                            <p class="wind"></p>
+                            <p class="humidity"></p>
                         </div>
                     </div>
 

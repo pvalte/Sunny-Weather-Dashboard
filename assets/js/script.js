@@ -25,7 +25,11 @@ var loadSavedCities = function () {
         cityArray = cityList.split(",");
         for (var i=0; i<cityArray.length; i++){
             createSavedCityEl(cityArray[i]);
-        }
+        };
+        //preload first city in local storage
+        if(cityArray[0]) {
+            getLatAndLon(cityArray[0]);
+        };
 }
 
 var createSavedCityEl = function (cityName) {
@@ -81,7 +85,7 @@ var getLatAndLon = function(city) {
                     getWeather(city,lat,lon);
                 });
             } else {
-                alert("nope");
+                alert("Not a valid city name");
             }
         })
         .catch(function (error) {
@@ -104,7 +108,7 @@ var getWeather = function(city,lat,lon) {
                     console.log(data);
                 });
             } else {
-                alert("nope");
+                alert("Unable to Retrieve Weather");
             }
         })
         .catch(function (error) {
@@ -150,32 +154,21 @@ var createTodaysForecast = function(city, data) {
 };
 
 var createFiveDayForecast = function(data) {
+    var dates = $('.date');
+    var icons = $('.icon');
+    var temps = $('.temp');
+    var winds = $('.wind');
+    var humidities = $('.humidity');
+
     for (var i=0; i<fiveDayForecastCards.length; i++) {
-        //clear old info
-        var dateEl = document.createElement('h5');
-        dateEl.textContent = moment().add(i+1, 'days').format("MM/DD/YYYY");
-        fiveDayForecastCards[i].appendChild(dateEl);
-        
-        var iconEl = document.createElement('img');
+        dates[i].textContent = moment().add(i+1, 'days').format("MM/DD/YYYY");
         var icon = data.daily[i+1].weather[0].icon;
-        iconEl.setAttribute('src', 'http://openweathermap.org/img/wn/' + icon + '@2x.png');
-        fiveDayForecastCards[i].appendChild(iconEl);
-        
-        var tempEl = document.createElement('p');
-        tempEl.textContent = "Temp: " + data.daily[i+1].temp.day + " F";
-        fiveDayForecastCards[i].appendChild(tempEl);
-
-        var windEl = document.createElement('p');
-        windEl.textContent = "Wind: " + data.daily[i+1].wind_speed + " MPH";
-        fiveDayForecastCards[i].appendChild(windEl);
-
-        var humidityEl = document.createElement('p');
-        humidityEl.textContent = "Temp: " + data.daily[i+1].humidity + " %";
-        fiveDayForecastCards[i].appendChild(humidityEl);
+        icons[i].setAttribute('src', 'http://openweathermap.org/img/wn/' + icon + '@2x.png');
+        temps[i].textContent = "Temp: " + data.daily[i+1].temp.day + " F";
+        winds[i].textContent = "Wind: " + data.daily[i+1].wind_speed + " MPH";
+        humidities[i].textContent = "Humidity: " + data.daily[i+1].humidity + " %";
     }    
 };
-
-
 
 //ON LOAD
 loadSavedCities();
