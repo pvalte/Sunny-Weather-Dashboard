@@ -31,11 +31,11 @@
                 <div class="row justify-content-around" id="todays-forecast">
                     <div class="col-12" >
                         <div id="today" class="card-body">
-                            <h2 class="card-title"><span id="city-name"></span> <span id="todays-date"></span> ☁️</h2>
-                            <p class="card-text">Temp: <span id="temp">74 F</span></p>
-                            <p class="card-text">Wind: <span id="wind">6.67 MPH</span></p>
-                            <p class="card-text">Humidity: <span id="humidity">46 %</span></p>
-                            <p class="card-text">UV Index: <span id="uv">0.47</span></p>
+                            <h2 class="card-title"><span id="city-name"></span> <span id="todays-date"></span> <img src="" id="todays-icon"></img></h2>
+                            <p class="card-text" id="today-temp"></p>
+                            <p class="card-text" id="today-wind"></p>
+                            <p class="card-text" id="today-humidity"></p>
+                            <p class="card-text" id="today-uv"><span id="today-uv-number"></span></p>
                         </div>
                     </div>
                 </div>
@@ -46,52 +46,27 @@
                     </div>
 
                     <div id="day-one" class="card col-lg-2 col-md-12">
-                        <div class="card-body">
-                            <h5 class="card-title">3/31/21</h5>
-                            <h6 class="card-subtitle mb-2">☁️</h6>
-                            <p class="card-text">Temp: <span id="temp">74 F</span></p>
-                            <p class="card-text">Wind: <span id="wind">6.67 MPH</span></p>
-                            <p class="card-text">Humidity: <span id="humidity">46 %</span></p>
+                        <div class="card-body five-day">
                         </div>
                     </div>
 
                     <div id="day-two" class="card col-lg-2 col-md-12">
-                        <div class="card-body">
-                            <h5 class="card-title">4/1/21</h5>
-                            <h6 class="card-subtitle mb-2">☁️</h6>
-                            <p class="card-text">Temp: <span id="temp">74 F</span></p>
-                            <p class="card-text">Wind: <span id="wind">6.67 MPH</span></p>
-                            <p class="card-text">Humidity: <span id="humidity">46 %</span></p>
+                        <div class="card-body five-day">
                         </div>
                     </div>
  
                     <div id="day-three" class="card col-lg-2 col-md-12">
-                        <div class="card-body">
-                            <h5 class="card-title">4/2/21</h5>
-                            <h6 class="card-subtitle mb-2">☁️</h6>
-                            <p class="card-text">Temp: <span id="temp">74 F</span></p>
-                            <p class="card-text">Wind: <span id="wind">6.67 MPH</span></p>
-                            <p class="card-text">Humidity: <span id="humidity">46 %</span></p>
+                        <div class="card-body five-day">
                         </div>
                     </div>
 
                     <div id="day-four" class="card col-lg-2 col-md-12">
-                        <div class="card-body">
-                            <h5 class="card-title">4/3/21</h5>
-                            <h6 class="card-subtitle mb-2">☁️</h6>
-                            <p class="card-text">Temp: <span id="temp">74 F</span></p>
-                            <p class="card-text">Wind: <span id="wind">6.67 MPH</span></p>
-                            <p class="card-text">Humidity: <span id="humidity">46 %</span></p>
+                        <div class="card-body five-day">
                         </div>
                     </div>
 
                     <div id="day-five" class="card col-lg-2 col-md-12">
-                        <div class="card-body">
-                            <h5 class="card-title">4/4/21</h5>
-                            <h6 class="card-subtitle mb-2">☁️</h6>
-                            <p class="card-text">Temp: <span id="temp">74 F</span></p>
-                            <p class="card-text">Wind: <span id="wind">6.67 MPH</span></p>
-                            <p class="card-text">Humidity: <span id="humidity">46 %</span></p>
+                        <div class="card-body five-day">
                         </div>
                     </div>
 
@@ -100,6 +75,7 @@
         </div>
     </main>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="assets\js\script.js"></script>
 </body>
